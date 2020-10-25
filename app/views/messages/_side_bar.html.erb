@@ -9,8 +9,8 @@
 
 <div class="side_content">
   <% current_user.rooms.each do |room| %>
-    <div class="room_list">    
-      <a href="#"><%= room.name %></a>
+    <div class="room_list">
+      <%= link_to room.name, room_messages_path(room) %> 
     </div>
   <% end %>
 </div>
